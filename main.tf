@@ -1,11 +1,11 @@
 provider "aws" {
 region = "ap-south-1"
-access_key = ""
-secret_key = ""
+access_key = "AKIARBSTPWJWEOFAXYJT"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-0b8b5288592eca360"
+  ami             = "ami-0700df939e7249d03"
   instance_type   = "t2.micro"
   key_name        = "phone"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -24,7 +24,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-0b8b5288592eca360"
+  ami             = "ami-0700df939e7249d03"
   instance_type   = "t2.micro"
   key_name        = "phone"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -35,7 +35,7 @@ sudo -i
 yum install httpd -y
 systemctl start httpd
 chkconfig httpd on
-echo "hai all this is my website created by terraform infrastructurte by raham sir server-2" > /var/www/html/index.html
+echo "hai all this is my website created by terraform infrastructurte by  sir furkhannserver-2" > /var/www/html/index.html
 EOF
   tags = {
     Name = "web-server-2"
@@ -43,7 +43,7 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-0b8b5288592eca360"
+  ami             = "ami-0700df939e7249d03"
   instance_type   = "t2.micro"
   key_name        = "phone"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -54,7 +54,7 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-0b8b5288592eca360"
+  ami             = "ami-0700df939e7249d03"
   instance_type   = "t2.micro"
   key_name        = "phone"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -89,7 +89,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "rahamshaikterra7gsywgys7889900prodenvgshj"
+  bucket = "furkhanterra7gsywgys7889900prodenvgshj"
 }
 
 resource "aws_iam_user" "seven" {
