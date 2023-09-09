@@ -1,13 +1,13 @@
 provider "aws" {
 region = "ap-south-1"
-access_key = "AKIARBSTPWJWEOFAXYJT"
-secret_key = "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"
+access_key = "AKIARBSTPWJWAD57P5V2"
+secret_key = "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
 }
 
 resource "aws_instance" "one" {
   ami             = "ami-0700df939e7249d03"
   instance_type   = "t2.micro"
-  key_name        = "phone"
+  key_name        = "zulum"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -26,7 +26,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-0700df939e7249d03"
   instance_type   = "t2.micro"
-  key_name        = "phone"
+  key_name        = "zulum"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -45,7 +45,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-0700df939e7249d03"
   instance_type   = "t2.micro"
-  key_name        = "phone"
+  key_name        = "zulum"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
@@ -56,7 +56,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-0700df939e7249d03"
   instance_type   = "t2.micro"
-  key_name        = "phone"
+  key_name        = "zulum"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
