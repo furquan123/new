@@ -92,17 +92,6 @@ resource "aws_s3_bucket" "six" {
   bucket = "furkhanterra7gsywgys7889900prodenvgshj"
 }
 
-resource "aws_iam_user" "seven" {
-for_each = var.user_names
-name = each.value
-}
-
-variable "user_names" {
-description = "*"
-type = set(string)
-default = ["usera", "userb", "userc", "userd"]
-}
-
 resource "aws_ebs_volume" "eight" {
  availability_zone = "eu-west-3a"
   size = 40
