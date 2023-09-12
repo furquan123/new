@@ -1,7 +1,7 @@
 provider "aws" {
 region = "ap-south-1"
-access_key = "AKIARBSTPWJWC3A6BD55"
-secret_key = "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"
+access_key = "AKIARBSTPWJWDO6XNVUP"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
@@ -89,12 +89,12 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "furkhanterra7gsywgys7889900prodenvgshj"
+  bucket = "furkhan7889900prodenvgshj"
 }
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "ap-south-1a"
-  size = 40
+  size = 25
   tags = {
     Name = "ebs-001"
   }
