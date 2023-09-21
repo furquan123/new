@@ -1,5 +1,5 @@
 resource "aws_elb" "bar" {
-  name               = "furkhan-elb"
+  name               = "fur-elb"
   availability_zones = ["ap-south-1b", "ap-south-1c"]
 
   listener {
@@ -21,6 +21,6 @@ resource "aws_elb" "bar" {
   cross_zone_load_balancing = true
   idle_timeout              = 400
   tags = {
-    Name = "furkhann-elb"
+    Name = "fur-elb"
   }
 }
