@@ -94,7 +94,7 @@ resource "aws_s3_bucket" "six" {
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "ap-south-1a"
-  size = 25
+  size = 17
   tags = {
     Name = "ebs-002"
   }
