@@ -96,6 +96,6 @@ resource "aws_ebs_volume" "eight" {
  availability_zone = "ap-south-1a"
   size = 17
   tags = {
-    Name = "ebs-002"
+    Name = "furkhan-ebs-oo1"
   }
 }
