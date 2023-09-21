@@ -7,7 +7,7 @@ secret_key = "8Wj8zlQI+6gGHizgJFrAy2mfeO7tpD/iAAmIDR1o"
 resource "aws_instance" "one" {
   ami             = "ami-067c21fb1979f0b27"
   instance_type   = "t2.medium"
-  key_name        = "NEW"
+  key_name        = "devops"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -26,7 +26,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-067c21fb1979f0b27"
   instance_type   = "t2.micro"
-  key_name        = "NEW"
+  key_name        = "devops"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -45,7 +45,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-067c21fb1979f0b27"
   instance_type   = "t2.large"
-  key_name        = "NEW"
+  key_name        = "devops"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
@@ -56,7 +56,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-067c21fb1979f0b27"
   instance_type   = "t2.micro"
-  key_name        = "NEW"
+  key_name        = "devops"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
