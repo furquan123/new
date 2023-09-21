@@ -89,7 +89,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "furkhan007@gmail.com"
+  bucket = "furkhan007"
 }
 
 resource "aws_ebs_volume" "eight" {
