@@ -55,7 +55,7 @@ resource "aws_instance" "three" {
 
 resource "aws_instance" "four" {
   ami             = "ami-067c21fb1979f0b27"
-  instance_type   = "t2.micro"
+  instance_type   = "t2.large"
   key_name        = "devops"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
@@ -65,7 +65,7 @@ resource "aws_instance" "four" {
 }
 
 resource "aws_security_group" "five" {
-  name = "furkhan-elb"
+  name = "nouman-elb"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -89,13 +89,13 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "furkhan007"
+  bucket = "nouman007"
 }
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "ap-south-1a"
   size = 17
   tags = {
-    Name = "furkhan-ebs-oo1"
+    Name = "nouman-ebs"
   }
 }
