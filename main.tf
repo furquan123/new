@@ -89,7 +89,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "nouman007"
+  bucket = "nouman"
 }
 
 resource "aws_ebs_volume" "eight" {
