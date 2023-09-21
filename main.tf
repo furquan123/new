@@ -1,13 +1,13 @@
 provider "aws" {
 region = "ap-south-1"
-access_key = "AKIARBSTPWJWDO6XNVUP"
-secret_key = "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"
+access_key = "AKIAWDHXRCZ4XXHASQ5C"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-02bb7d8191b50f4bb"
-  instance_type   = "t2.micro"
-  key_name        = "phone"
+  ami             = "ami-067c21fb1979f0b27"
+  instance_type   = "t2.medium"
+  key_name        = "NEW"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -16,7 +16,7 @@ sudo -i
 yum install httpd -y
 systemctl start httpd
 chkconfig httpd on
-echo "hai all this is my app created by terraform infrastructurte by raham sir server-1" > /var/www/html/index.html
+echo "hai all this is my app created by terraform infrastructurte by furkhan server-1" > /var/www/html/index.html
 EOF
   tags = {
     Name = "web-server-1"
@@ -24,9 +24,9 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-02bb7d8191b50f4bb"
+  ami             = "ami-067c21fb1979f0b27"
   instance_type   = "t2.micro"
-  key_name        = "phone"
+  key_name        = "NEW"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -43,9 +43,9 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-02bb7d8191b50f4bb"
-  instance_type   = "t2.micro"
-  key_name        = "phone"
+  ami             = "ami-067c21fb1979f0b27"
+  instance_type   = "t2.large"
+  key_name        = "NEW"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
@@ -54,9 +54,9 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-02bb7d8191b50f4bb"
+  ami             = "ami-067c21fb1979f0b27"
   instance_type   = "t2.micro"
-  key_name        = "phone"
+  key_name        = "NEW"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
@@ -89,13 +89,13 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "furkhan7889900prodenvgshj"
+  bucket = "furkhan007@gmail.com"
 }
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "ap-south-1a"
   size = 25
   tags = {
-    Name = "ebs-001"
+    Name = "ebs-002"
   }
 }
