@@ -44,7 +44,7 @@ EOF
 
 resource "aws_instance" "three" {
   ami             = "ami-0b41f7055516b991a"
-  instance_type   = "t2.large"
+  instance_type   = "t2.small"
   key_name        = "devops"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
@@ -55,7 +55,7 @@ resource "aws_instance" "three" {
 
 resource "aws_instance" "four" {
   ami             = "ami-0b41f7055516b991a"
-  instance_type   = "t2.large"
+  instance_type   = "t2.medium"
   key_name        = "devops"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
