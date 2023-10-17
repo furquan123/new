@@ -6,7 +6,7 @@ secret_key = "rP54rC7oa9/JBOdSdiIInP9NQE5FD30XaWY8HpYZ"
 
 resource "aws_instance" "one" {
   ami             = "ami-0b41f7055516b991a"
-  instance_type   = "t2.micro"
+  instance_type   = "t2.medium"
   key_name        = "devops"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
